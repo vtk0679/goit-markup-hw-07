@@ -1,0 +1,89 @@
+.logo {
+  margin-right: 93px;
+
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  color: var(--main-black-color);
+}
+
+.nav-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.nav-link,
+.contacts-link {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms var(--main-animation);
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contacts-link > svg {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--title-text-color);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.contacts-link:hover,
+.contacts-link:focus,
+.logo span,
+.nav-link.current {
+  color: var(--accent-color);
+}
+
+.current::after {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav,
+.contacts {
+  display: flex;
+}
+
+.nav > .item:not(:first-child),
+.contacts > .item:not(:first-child) {
+  margin-left: 50px;
+}
+
+.header {
+  border-bottom: 1px solid var(--header-border);
+}

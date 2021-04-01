@@ -1,0 +1,34 @@
+.work-examples {
+  padding-top: 47px;
+}
+
+.work-examples > .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--items-set-gap));
+  margin-top: calc(-1 * var(--items-set-gap));
+}
+
+.work-examples-list-item {
+  flex-basis: calc(100% / 3 - var(--items-set-gap));
+  margin-left: var(--items-set-gap);
+  margin-top: var(--items-set-gap);
+}
+
+.work-examples-list-item h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: var(--main-letter-spacing);
+  text-align: center;
+
+  color: var(--primary-white-color);
+  background-color: var(--background-work-examples);
+}

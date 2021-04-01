@@ -1,0 +1,37 @@
+body {
+  font-family: var(--main-font);
+  font-weight: var(--main-font-weight);
+  letter-spacing: var(--main-letter-spacing);
+  color: var(--primary-text-color);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

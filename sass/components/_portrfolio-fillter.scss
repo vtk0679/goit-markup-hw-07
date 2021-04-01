@@ -1,0 +1,48 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter > .item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.filter-button {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: inherit;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  transition: background-color 250ms var(--main-animation),
+    color 250ms var(--main-animation), box-shadow 250ms var(--main-animation);
+
+  background-color: var(--background-light);
+  color: var(--title-text-color);
+}
+
+.radio-input:checked + .filter-button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.radio-input:focus + .filter-button {
+  border: 1px solid black;
+}
+
+.filter-button:focus,
+.filter-button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}

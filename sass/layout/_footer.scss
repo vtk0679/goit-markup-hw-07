@@ -1,0 +1,119 @@
+.main-footer {
+  background-color: #2f303a;
+}
+
+.main-footer .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.main-footer .logo {
+  display: block;
+  margin-bottom: 20px;
+
+  color: var(--primary-white-color);
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.addr,
+.mail,
+.tel {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  text-align: left;
+}
+
+.addr {
+  display: block;
+  margin-bottom: 9px;
+
+  color: var(--primary-white-color);
+}
+
+.mail {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.mail,
+.tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-center {
+  width: 206px;
+}
+
+.footer-center > b,
+.footer-right-side > b {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: var(--main-letter-spacing);
+  margin-bottom: 20px;
+
+  color: var(--primary-white-color);
+}
+
+.footer-center .social-link {
+  color: var(--primary-white-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.subscribe-email {
+  height: 50px;
+  width: 358px;
+  margin-right: 12px;
+  border-radius: 4px;
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+  color: var(--primary-white-color);
+}
+
+.subscribe-email::placeholder {
+  font-weight: var(--main-font-weight);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: var(--main-letter-spacing);
+
+  color: var(--placeholder-subscribe-color);
+}
+
+.subscribe-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+
+  transition: background-color 250ms var(--main-animation);
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.subscribe-submit-btn:focus,
+.subscribe-submit-btn:hover {
+  background-color: var(--hero-btn-accent-color);
+}
+
+.subscribe-submit-btn > svg {
+  margin-left: 10px;
+  fill: currentColor;
+}

@@ -1,21 +1,23 @@
 .work-examples {
+  @extend %section;
   padding-top: 47px;
 }
 
-.work-examples > .list {
+.examples-list {
+  @extend %list;
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--items-set-gap));
   margin-top: calc(-1 * var(--items-set-gap));
 }
 
-.work-examples-list-item {
+.examples-list__item {
   flex-basis: calc(100% / 3 - var(--items-set-gap));
   margin-left: var(--items-set-gap);
   margin-top: var(--items-set-gap);
 }
 
-.work-examples-list-item h3 {
+.examples-list__title {
   position: absolute;
   bottom: 0;
   width: 100%;

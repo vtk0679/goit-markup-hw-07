@@ -1,4 +1,5 @@
 .logo {
+  @extend %link;
   margin-right: 93px;
 
   font-family: var(--secondary-font);
@@ -9,14 +10,12 @@
   color: var(--main-black-color);
 }
 
-.nav-link {
+.nav__link,
+.contacts__link {
+  @extend %link;
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-}
-
-.nav-link,
-.contacts-link {
-  display: block;
 
   font-size: 14px;
   font-weight: 500;
@@ -26,33 +25,32 @@
   transition: color 250ms var(--main-animation);
 }
 
-.contacts-link {
+.contacts__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
-.contacts-link > svg {
+.contacts__svg {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.nav-link {
+.nav__link {
+  @extend %link;
   position: relative;
   color: var(--title-text-color);
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.contacts-link:hover,
-.contacts-link:focus,
-.logo span,
-.nav-link.current {
+.nav__link:hover,
+.nav__link:focus,
+.contacts__link:hover,
+.contacts__link:focus,
+.logo__first-part,
+.nav__link_current {
   color: var(--accent-color);
 }
 
-.current::after {
+.nav__link_current::after {
   position: absolute;
   bottom: -1px;
   display: block;
@@ -63,7 +61,7 @@
   background-color: var(--accent-color);
 }
 
-.main-header {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,12 +74,14 @@
 
 .nav,
 .contacts {
+  @extend %list;
   display: flex;
 }
 
-.nav > .item:not(:first-child),
-.contacts > .item:not(:first-child) {
-  margin-left: 50px;
+@each $item in nav, contacts {
+  .#{$item} > .#{$item}__item_position:not(:first-child) {
+    margin-left: 50px;
+  }
 }
 
 .header {

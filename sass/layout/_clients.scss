@@ -1,14 +1,19 @@
-.clients-list {
+.clients {
+  @extend %section;
+}
+
+.clients__list {
+  @extend %list;
   display: flex;
   justify-content: space-between;
 }
 
-.clients-list-item {
+.clients__item {
   width: 170px;
   height: 90px;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   width: 100%;
   height: 100%;
@@ -22,14 +27,14 @@
 
   color: var(--icons-color);
   border-color: var(--icons-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
 }
 
-.clients-link:hover,
-.clients-link:focus {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.clients-link > svg {
-  fill: currentColor;
+.clients__svg {
+  @extend %svg;
 }

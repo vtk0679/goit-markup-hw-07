@@ -1,3 +1,271 @@
+/*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+Sections
+========
+*/
+/**
+Remove the margin in all browsers.
+*/
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
 :root {
   --items-set-gap: 30px;
   --primary-text-color: #757575;
@@ -60,11 +328,33 @@ img {
   color: inherit;
 }
 
+.logo, .main-footer__logo, .nav__link,
+.contacts__link, .contacts-block__address,
+.contacts-block__mail,
+.contacts-block__tel {
+  text-decoration: none;
+  color: inherit;
+}
+
 .list {
   list-style: none;
 }
 
+.nav,
+.contacts, .advantages-list, .examples-list, .social-list, .team__list, .clients__list {
+  list-style: none;
+}
+
+.social-list__svg, .clients__svg, .modal__close-svg, .subscribe__icon {
+  fill: currentColor;
+}
+
 .section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advantages, .work-examples, .team, .clients {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -77,7 +367,7 @@ img {
   margin: -1px;
 }
 
-.container {
+.container, .main-footer__container {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
@@ -90,7 +380,30 @@ img {
   overflow: hidden;
 }
 
-.logo {
+.hero__button, .form-call-back__button-submit {
+  margin-left: auto;
+  margin-right: auto;
+  border-style: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-modal-submit-button);
+  transition: color 250ms var(--main-animation), box-shadow 250ms var(--main-animation);
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.hero__button:hover, .form-call-back__button-submit:hover, .hero__button:focus, .form-call-back__button-submit:focus {
+  background-color: var(--hero-btn-accent-color);
+  box-shadow: var(--box-shadow-modal-submit-button-hover);
+}
+
+.logo, .main-footer__logo {
   margin-right: 93px;
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -99,14 +412,11 @@ img {
   color: var(--main-black-color);
 }
 
-.nav-link {
+.nav__link,
+.contacts__link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-}
-
-.nav-link,
-.contacts-link {
-  display: block;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
@@ -114,33 +424,31 @@ img {
   transition: color 250ms var(--main-animation);
 }
 
-.contacts-link {
+.contacts__link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
-.contacts-link > svg {
+.contacts__svg {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.nav-link {
+.nav__link {
   position: relative;
   color: var(--title-text-color);
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.contacts-link:hover,
-.contacts-link:focus,
-.logo span,
-.nav-link.current {
+.nav__link:hover,
+.nav__link:focus,
+.contacts__link:hover,
+.contacts__link:focus,
+.logo__first-part,
+.nav__link_current {
   color: var(--accent-color);
 }
 
-.current::after {
+.nav__link_current::after {
   position: absolute;
   bottom: -1px;
   display: block;
@@ -151,7 +459,7 @@ img {
   background-color: var(--accent-color);
 }
 
-.main-header {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -167,126 +475,16 @@ img {
   display: flex;
 }
 
-.nav > .item:not(:first-child),
-.contacts > .item:not(:first-child) {
+.nav > .nav__item_position:not(:first-child) {
+  margin-left: 50px;
+}
+
+.contacts > .contacts__item_position:not(:first-child) {
   margin-left: 50px;
 }
 
 .header {
   border-bottom: 1px solid var(--header-border);
-}
-
-.main-footer {
-  background-color: #2f303a;
-}
-
-.main-footer .container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.main-footer .logo {
-  display: block;
-  margin-bottom: 20px;
-  color: var(--primary-white-color);
-}
-
-.main-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.addr,
-.mail,
-.tel {
-  font-size: 14px;
-  font-style: normal;
-  line-height: 1.71;
-  text-align: left;
-}
-
-.addr {
-  display: block;
-  margin-bottom: 9px;
-  color: var(--primary-white-color);
-}
-
-.mail {
-  display: block;
-  margin-bottom: 9px;
-}
-
-.mail,
-.tel {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-center {
-  width: 206px;
-}
-
-.footer-center > b,
-.footer-right-side > b {
-  display: block;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: var(--main-letter-spacing);
-  margin-bottom: 20px;
-  color: var(--primary-white-color);
-}
-
-.footer-center .social-link {
-  color: var(--primary-white-color);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.subscribe-email {
-  height: 50px;
-  width: 358px;
-  margin-right: 12px;
-  border-radius: 4px;
-  padding: 15px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  background-color: transparent;
-  color: var(--primary-white-color);
-}
-
-.subscribe-email::placeholder {
-  font-weight: var(--main-font-weight);
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: var(--main-letter-spacing);
-  color: var(--placeholder-subscribe-color);
-}
-
-.subscribe-submit-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 28px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  transition: background-color 250ms var(--main-animation);
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-}
-
-.subscribe-submit-btn:focus,
-.subscribe-submit-btn:hover {
-  background-color: var(--hero-btn-accent-color);
-}
-
-.subscribe-submit-btn > svg {
-  margin-left: 10px;
-  fill: currentColor;
 }
 
 .hero {
@@ -300,11 +498,11 @@ img {
   background-image: linear-gradient(RGBA(var(--hero-overlay)), RGBA(var(--hero-overlay))), url(../images/index/hero/hero.jpg);
 }
 
-.hero-content {
+.hero__container {
   padding: 200px 237px;
 }
 
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
   font-size: 44px;
   font-weight: 900;
@@ -315,27 +513,8 @@ img {
   color: var(--primary-white-color);
 }
 
-.hero-button {
-  margin-left: auto;
-  margin-right: auto;
-  border-style: none;
-  border-radius: 4px;
+.hero__button {
   padding: 10px 32px;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 250ms var(--main-animation);
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: var(--hero-btn-accent-color);
 }
 
 .advantages {
@@ -349,7 +528,7 @@ img {
   margin-top: calc(-1 * var(--items-set-gap));
 }
 
-.advantages-card-thumb {
+.advantages-list__card-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,13 +538,13 @@ img {
   background-color: var(--background-light);
 }
 
-.advantages-list-item {
+.advantages-list__item {
   flex-basis: calc(100% / 4 - var(--items-set-gap));
   margin-left: var(--items-set-gap);
   margin-top: var(--items-set-gap);
 }
 
-.advantages-list-item h3 {
+.advantages-list__title {
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
@@ -373,12 +552,12 @@ img {
   color: var(--title-text-color);
 }
 
-.advantages-list-item p {
+.advantages-list__message {
   font-size: 14px;
   line-height: 1.71;
 }
 
-.title {
+.title, .team__title {
   margin-bottom: 50px;
   font-size: 36px;
   font-weight: 700;
@@ -391,20 +570,20 @@ img {
   padding-top: 47px;
 }
 
-.work-examples > .list {
+.examples-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--items-set-gap));
   margin-top: calc(-1 * var(--items-set-gap));
 }
 
-.work-examples-list-item {
+.examples-list__item {
   flex-basis: calc(100% / 3 - var(--items-set-gap));
   margin-left: var(--items-set-gap);
   margin-top: var(--items-set-gap);
 }
 
-.work-examples-list-item h3 {
+.examples-list__title {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -420,37 +599,17 @@ img {
   background-color: var(--background-work-examples);
 }
 
-.team {
-  text-align: center;
-  background: var(--background-light);
-}
-
-.team .title {
-  margin-bottom: 50px;
-}
-
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--items-set-gap));
-  margin-top: calc(-1 * var(--items-set-gap));
-}
-
-.team-list-card-content {
-  padding: 30px 32px;
-}
-
-.social-list-item {
-  width: 44px;
-  height: 44px;
-}
-
-.social-links-list {
+.social-list {
   display: flex;
   justify-content: space-between;
 }
 
-.social-link {
+.social-list__item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -461,53 +620,71 @@ img {
   color: var(--icons-color);
 }
 
-.social-link:hover,
-.social-link:focus {
+.social-list__link:hover, .social-list__link:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
 
-.social-link > svg {
-  fill: currentColor;
+.team {
+  text-align: center;
+  background: var(--background-light);
 }
 
-.team-list-item {
+.team__title {
+  margin-bottom: 50px;
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--items-set-gap));
+  margin-top: calc(-1 * var(--items-set-gap));
+}
+
+.team__item {
   flex-basis: calc(100% / 4 - var(--items-set-gap));
   margin-left: var(--items-set-gap);
   margin-top: var(--items-set-gap);
+}
+
+.person-card {
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--team-card-box-shadow);
   background-color: var(--primary-white-color);
 }
 
-.team-list-item h3,
-.team-list-item p {
+.person-card__content {
+  padding: 30px 32px;
+}
+
+.person-card__title,
+.person-card__position {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
 
-.team-list-item p {
+.person-card__position {
   margin-bottom: 16px;
 }
 
-.team-list-item h3 {
+.person-card__title {
   margin-bottom: 10px;
   font-weight: 500;
   color: var(--title-text-color);
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   justify-content: space-between;
 }
 
-.clients-list-item {
+.clients__item {
   width: 170px;
   height: 90px;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   width: 100%;
   height: 100%;
@@ -521,14 +698,9 @@ img {
   border-color: var(--icons-color);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
-}
-
-.clients-link > svg {
-  fill: currentColor;
 }
 
 .backdrop {
@@ -549,6 +721,62 @@ img {
   transition: opacity 250ms var(--main-animation), visibility 1ms linear 250ms;
 }
 
+.license-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.license-block__checkbox {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.license-block,
+.license-block__link {
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: var(--main-letter-spacing);
+}
+
+.license-block__link {
+  position: relative;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.license-block__link::after {
+  content: '';
+  position: absolute;
+  width: 127px;
+  height: 1px;
+  bottom: -7px;
+  left: 0;
+  background-color: var(--accent-color);
+}
+
+.license-block__icon {
+  border-radius: 3px;
+  margin-right: 8px;
+  transition: fill 250ms var(--main-animation), box-shadow 250ms var(--main-animation);
+  box-shadow: inset 0px 0px 0px 2px var(--title-text-color);
+  fill: transparent;
+}
+
+.license-block__checkbox:checked + .license-block__icon {
+  box-shadow: inset 0px 0px 0px 2px transparent;
+  fill: var(--accent-color);
+}
+
+.license-block__checkbox:focus-visible + .license-block__icon {
+  outline: 2px solid black;
+}
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.5);
 }
@@ -566,7 +794,7 @@ img {
   background-color: var(--primary-white-color);
 }
 
-.button-close {
+.modal__button-close {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -580,16 +808,11 @@ img {
   background-color: var(--primary-white-color);
 }
 
-.button-close:hover,
-.button-close:focus {
+.modal__button-close:hover, .modal__button-close:focus {
   color: var(--accent-color);
 }
 
-.button-close > svg {
-  fill: currentColor;
-}
-
-.modal > p {
+.modal__title {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.15;
@@ -599,7 +822,7 @@ img {
   color: var(--title-text-color);
 }
 
-.label {
+.form-call-back__label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -607,29 +830,15 @@ img {
   letter-spacing: 0.01em;
 }
 
-.input-box {
+.form-call-back__input-box {
   position: relative;
 }
 
-.form-input-block {
+.form-call-back__input-block {
   margin-bottom: 10px;
 }
 
-.input-box-modal-svg {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translate(0, -50%);
-  transition: fill 250ms var(--main-animation);
-  fill: var(--title-text-color);
-}
-
-.modal-input:focus + .modal-svg,
-.modal-input:focus + .input-box-modal-svg {
-  fill: var(--accent-color);
-}
-
-.modal-input {
+.form-call-back__input {
   width: 100%;
   height: 40px;
   border: var(--border-modal-inputs);
@@ -641,12 +850,25 @@ img {
   transition: border-color 250ms var(--main-animation);
 }
 
-.modal-input:focus {
+.form-call-back__input:focus {
   outline: none;
   border-color: var(--accent-color);
 }
 
-.form-input-block > textarea {
+.form-call-back__svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+  transition: fill 250ms var(--main-animation);
+  fill: var(--title-text-color);
+}
+
+.form-call-back__input:focus + .form-call-back__svg {
+  fill: var(--accent-color);
+}
+
+.form-call-back__comment {
   width: 100%;
   height: 120px;
   border: var(--border-modal-inputs);
@@ -659,93 +881,130 @@ img {
   transition: border-color 250ms var(--main-animation);
 }
 
-.form-input-block > textarea:focus {
+.form-call-back__comment:focus {
   outline: none;
   border-color: var(--accent-color);
 }
 
-.label-comment > textarea::placeholder {
+.form-call-back__comment::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--placeholder-modal-color);
 }
 
-.license-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.license-block,
-.license-link {
-  font-size: 14px;
-  line-height: 1.71px;
-  letter-spacing: var(--main-letter-spacing);
-}
-
-.license-link {
-  position: relative;
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-.license-link::after {
-  content: '';
-  position: absolute;
-  width: 127px;
-  height: 1px;
-  bottom: -7px;
-  left: 0;
-  background-color: var(--accent-color);
-}
-
-.button-submit {
+.form-call-back__button-submit {
   display: block;
   padding: 10px 56px;
-  margin: auto;
-  border: none;
+}
+
+.main-footer {
+  background-color: #2f303a;
+}
+
+.main-footer__container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.main-footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contacts-block__address,
+.contacts-block__mail,
+.contacts-block__tel {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  text-align: left;
+}
+
+.contacts-block__address {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--primary-white-color);
+}
+
+.contacts-block__mail {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.contacts-block__mail,
+.contacts-block__tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.main-footer__social {
+  width: 206px;
+}
+
+.main-footer__subtitle {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: var(--main-letter-spacing);
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+}
+
+.social-list__link_footer {
+  color: var(--primary-white-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.subscribe__email {
+  height: 50px;
+  width: 358px;
+  margin-right: 12px;
   border-radius: 4px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+  color: var(--primary-white-color);
+}
+
+.subscribe__email::placeholder {
+  font-weight: var(--main-font-weight);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: var(--main-letter-spacing);
+  color: var(--placeholder-subscribe-color);
+}
+
+.subscribe__submit-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 28px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  box-shadow: var(--box-shadow-modal-submit-button);
-  transition: color 250ms var(--main-animation), box-shadow 250ms var(--main-animation);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms var(--main-animation);
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
 
-.button-submit:hover,
-.button-submit:focus {
+.subscribe__submit-btn:focus, .subscribe__submit-btn:hover {
   background-color: var(--hero-btn-accent-color);
-  box-shadow: var(--box-shadow-modal-submit-button-hover);
 }
 
-.icon-checkbox {
-  border-radius: 3px;
-  margin-right: 8px;
-  transition: fill 250ms var(--main-animation), box-shadow 250ms var(--main-animation);
-  box-shadow: inset 0px 0px 0px 2px var(--title-text-color);
-  fill: transparent;
-}
-
-.checkbox:checked + .icon-checkbox {
-  box-shadow: inset 0px 0px 0px 2px transparent;
-  fill: var(--accent-color);
-}
-
-.checkbox:focus-visible + .icon-checkbox {
-  outline: 2px solid black;
-}
-
-.checkbox {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.subscribe__icon {
+  margin-left: 10px;
 }
 /*# sourceMappingURL=main.css.map */

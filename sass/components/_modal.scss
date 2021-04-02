@@ -16,7 +16,7 @@
   background-color: var(--primary-white-color);
 }
 
-.button-close {
+.modal__button-close {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -31,18 +31,18 @@
   color: var(--main-black-color);
   border-color: var(--border-modal-close-button);
   background-color: var(--primary-white-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.button-close:hover,
-.button-close:focus {
-  color: var(--accent-color);
+.modal__close-svg {
+  @extend %svg;
 }
 
-.button-close > svg {
-  fill: currentColor;
-}
-
-.modal > p {
+.modal__title {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.15;
@@ -53,7 +53,7 @@
   color: var(--title-text-color);
 }
 
-.label {
+.form-call-back__label {
   display: block;
   margin-bottom: 4px;
 
@@ -62,30 +62,15 @@
   letter-spacing: 0.01em;
 }
 
-.input-box {
+.form-call-back__input-box {
   position: relative;
 }
 
-.form-input-block {
+.form-call-back__input-block {
   margin-bottom: 10px;
 }
 
-.input-box-modal-svg {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translate(0, -50%);
-  transition: fill 250ms var(--main-animation);
-
-  fill: var(--title-text-color);
-}
-
-.modal-input:focus + .modal-svg,
-.modal-input:focus + .input-box-modal-svg {
-  fill: var(--accent-color);
-}
-
-.modal-input {
+.form-call-back__input {
   width: 100%;
   height: 40px;
   border: var(--border-modal-inputs);
@@ -96,14 +81,28 @@
   letter-spacing: 0.01em;
 
   transition: border-color 250ms var(--main-animation);
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 
-.modal-input:focus {
-  outline: none;
-  border-color: var(--accent-color);
+.form-call-back__svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(0, -50%);
+  transition: fill 250ms var(--main-animation);
+
+  fill: var(--title-text-color);
+
+  .form-call-back__input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
-.form-input-block > textarea {
+.form-call-back__comment {
   width: 100%;
   height: 120px;
   border: var(--border-modal-inputs);
@@ -115,98 +114,23 @@
   letter-spacing: 0.01em;
 
   transition: border-color 250ms var(--main-animation);
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: var(--placeholder-modal-color);
+  }
 }
 
-.form-input-block > textarea:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
-
-.label-comment > textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-
-  color: var(--placeholder-modal-color);
-}
-
-.license-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.license-block,
-.license-link {
-  font-size: 14px;
-  line-height: 1.71px;
-  letter-spacing: var(--main-letter-spacing);
-}
-
-.license-link {
-  position: relative;
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-.license-link::after {
-  content: '';
-  position: absolute;
-  width: 127px;
-  height: 1px;
-  bottom: -7px;
-  left: 0;
-  background-color: var(--accent-color);
-}
-
-.button-submit {
+.form-call-back__button-submit {
+  @extend %button;
   display: block;
   padding: 10px 56px;
-  margin: auto;
-  border: none;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  box-shadow: var(--box-shadow-modal-submit-button);
-  transition: color 250ms var(--main-animation), box-shadow 250ms var(--main-animation);
-
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-}
-
-.button-submit:hover,
-.button-submit:focus {
-  background-color: var(--hero-btn-accent-color);
-  box-shadow: var(--box-shadow-modal-submit-button-hover);
-}
-
-.icon-checkbox {
-  border-radius: 3px;
-  margin-right: 8px;
-
-  transition: fill 250ms var(--main-animation), box-shadow 250ms var(--main-animation);
-  box-shadow: inset 0px 0px 0px 2px var(--title-text-color);
-
-  fill: transparent;
-}
-
-.checkbox:checked + .icon-checkbox {
-  box-shadow: inset 0px 0px 0px 2px transparent;
-  fill: var(--accent-color);
-}
-
-.checkbox:focus-visible + .icon-checkbox {
-  outline: 2px solid black;
-}
-
-.checkbox {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
 }

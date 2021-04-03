@@ -1,13 +1,5 @@
-.logo {
-  @extend %link;
-  margin-right: 93px;
-
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-
-  color: var(--main-black-color);
+.header {
+  border-bottom: 1px solid var(--header-border);
 }
 
 .nav__link,
@@ -23,6 +15,16 @@
   letter-spacing: 0.02em;
 
   transition: color 250ms var(--main-animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.nav__link {
+  position: relative;
+  color: var(--title-text-color);
 }
 
 .contacts__link {
@@ -35,30 +37,23 @@
   fill: currentColor;
 }
 
-.nav__link {
-  @extend %link;
-  position: relative;
-  color: var(--title-text-color);
-}
-
-.nav__link:hover,
-.nav__link:focus,
-.contacts__link:hover,
-.contacts__link:focus,
-.logo__first-part,
-.nav__link_current {
+.logo__first-part {
   color: var(--accent-color);
 }
 
-.nav__link_current::after {
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+.nav__link_current {
+  color: var(--accent-color);
+
+  &::after {
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
 }
 
 .header__container {
@@ -78,12 +73,9 @@
   display: flex;
 }
 
-@each $item in nav, contacts {
-  .#{$item} > .#{$item}__item_position:not(:first-child) {
+.nav__item_position,
+.contacts__item_position {
+  &:not(:first-child) {
     margin-left: 50px;
   }
-}
-
-.header {
-  border-bottom: 1px solid var(--header-border);
 }

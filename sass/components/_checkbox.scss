@@ -14,17 +14,20 @@
   margin: -1px;
 }
 
-.license-block,
-.license-block__link {
+.license-block {
   font-size: 14px;
   line-height: 1.71px;
   letter-spacing: var(--main-letter-spacing);
 }
 
 .license-block__link {
+  @extend %link;
   position: relative;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: var(--main-letter-spacing);
+
   color: var(--accent-color);
-  text-decoration: none;
 
   &::after {
     content: '';

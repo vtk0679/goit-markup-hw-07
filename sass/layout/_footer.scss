@@ -1,23 +1,15 @@
-.main-footer {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: #2f303a;
 }
 
-.main-footer__container {
+.footer__container {
   @extend .container;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-}
-
-.main-footer__logo {
-  @extend .logo;
-  display: block;
-  margin-bottom: 20px;
-
-  color: var(--primary-white-color);
 }
 
 .contacts-block__address,
@@ -47,11 +39,11 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-.main-footer__social {
+.footer__social {
   width: 206px;
 }
 
-.main-footer__subtitle {
+.footer__subtitle {
   display: block;
   text-transform: uppercase;
   font-weight: 700;
@@ -61,11 +53,6 @@
   margin-bottom: 20px;
 
   color: var(--primary-white-color);
-}
-
-.social-list__link_footer {
-  color: var(--primary-white-color);
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .subscribe__email {

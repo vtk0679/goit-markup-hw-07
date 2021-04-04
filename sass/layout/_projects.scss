@@ -1,9 +1,10 @@
-.work-examples {
+.projects {
   @extend %section;
+  @extend .container;
   padding-top: 47px;
 }
 
-.examples-list {
+.projects__list {
   @extend %list;
   display: flex;
   flex-wrap: wrap;
@@ -11,13 +12,13 @@
   margin-top: calc(-1 * var(--items-set-gap));
 }
 
-.examples-list__item {
+.projects__item {
   flex-basis: calc(100% / 3 - var(--items-set-gap));
   margin-left: var(--items-set-gap);
   margin-top: var(--items-set-gap);
 }
 
-.examples-list__title {
+.projects__title {
   position: absolute;
   bottom: 0;
   width: 100%;

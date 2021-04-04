@@ -24,18 +24,18 @@
   margin-top: var(--items-set-gap);
 }
 
-.person-card {
+.person {
   border-radius: 0px 0px 4px 4px;
 
   box-shadow: var(--team-card-box-shadow);
   background-color: var(--primary-white-color);
 }
 
-.person-card__content {
+.person__content {
   padding: 30px 32px;
 }
 
-.person-card__title {
+.person__name {
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 500;
@@ -45,7 +45,7 @@
   color: var(--title-text-color);
 }
 
-.person-card__position {
+.person__position {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;

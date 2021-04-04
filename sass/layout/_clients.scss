@@ -1,5 +1,6 @@
 .clients {
   @extend %section;
+  @extend .container;
 }
 
 .clients__list {

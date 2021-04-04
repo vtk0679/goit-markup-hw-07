@@ -11,11 +11,14 @@
 }
 
 .hero__container {
-  padding: 200px 237px;
+  padding: 200px 0;
 }
 
 .hero__title {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  max-width: 696px;
 
   font-size: 44px;
   font-weight: 900;

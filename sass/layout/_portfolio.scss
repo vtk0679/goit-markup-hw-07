@@ -1,8 +1,8 @@
-.main-section {
+.our-projects {
   @extend %section;
 }
 
-.works-card-set {
+.our-projects__list {
   @extend %list;
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +10,7 @@
   margin-top: calc(-1 * var(--items-set-gap));
 }
 
-.works-card-set__item {
+.our-projects__item {
   flex-basis: calc(100% / 3 - var(--items-set-gap));
   margin-left: var(--items-set-gap);
   margin-top: var(--items-set-gap);
@@ -55,6 +55,10 @@
   .card:hover & {
     transform: translateY(0);
   }
+}
+
+.card__thumb {
+  @extend .img-thumb;
 }
 
 .card__title {

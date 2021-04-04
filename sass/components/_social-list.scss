@@ -1,15 +1,15 @@
-.social-list {
+.social__list {
   @extend %list;
   display: flex;
   justify-content: space-between;
 }
 
-.social-list__item {
+.social__item {
   width: 44px;
   height: 44px;
 }
 
-.social-list__link {
+.social__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +29,11 @@
   }
 }
 
-.social-list__svg {
+.social__svg {
   @extend %svg;
+}
+
+.social__link--footer {
+  color: var(--primary-white-color);
+  background: rgba(255, 255, 255, 0.1);
 }
